@@ -35,7 +35,7 @@
   ipadOnlyLabel.hidden = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad;
 
   // Fetch all facebook friends and store in NSArray
-  [ApplicationDelegate.facebook requestWithGraphPath:@"me/friends" andDelegate:self];
+  [ApplicationDelegate.facebook requestWithGraphPath:@"me/friends?fields=id,first_name,last_name" andDelegate:self];
   [SVProgressHUD showWithStatus:@"Fetching friends" maskType:SVProgressHUDMaskTypeGradient];
 }
 
@@ -56,7 +56,10 @@
   NSDictionary * rawObject = result;
   NSArray * dataArray = [rawObject objectForKey:@"data"];
   for (NSDictionary * f in dataArray) {
-    [friends addObject:[[KNSelectorItem alloc] initWithDisplayValue:[f objectForKey:@"name"]
+      NSMutableString *name = [f objectForKey:@"last_name"];
+      [name appendString:@" "];
+      [name appendString:[f objectForKey:@"first_name"]];
+    [friends addObject:[[KNSelectorItem alloc] initWithDisplayValue:name
                                                         selectValue:[f objectForKey:@"id"]
                                                            imageUrl:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=square", [f objectForKey:@"id"]]]];
   }
@@ -78,7 +81,7 @@
   selector.useTableIndex      = YES;
   selector.useRecentItems     = YES;
   selector.maxNumberOfRecentItems = 4;
-  selector.allowModeButtons = NO;
+  selector.allowModeButtons = YES;
   UINavigationController * uinav = [[UINavigationController alloc] initWithRootViewController:selector];
   uinav.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
   uinav.modalPresentationStyle = UIModalPresentationFormSheet;

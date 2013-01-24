@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		429A74D916B155EB00AD60EF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 429A74D816B155EB00AD60EF /* Default-568h@2x.png */; };
 		8B147FF515807CBE00C7B064 /* Default@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B147FF415807CBE00C7B064 /* Default@2x~ipad.png */; };
 		8B14802D158082E200C7B064 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B14801B158082E200C7B064 /* SDImageCache.m */; };
 		8B14802E158082E200C7B064 /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B14801F158082E200C7B064 /* SDWebImageDecoder.m */; };
@@ -64,6 +65,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		429A74D816B155EB00AD60EF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8B147FF415807CBE00C7B064 /* Default@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x~ipad.png"; sourceTree = "<group>"; };
 		8B14801A158082E200C7B064 /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
 		8B14801B158082E200C7B064 /* SDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDImageCache.m; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 		8BE7B1751577EDAF00BC7787 = {
 			isa = PBXGroup;
 			children = (
+				429A74D816B155EB00AD60EF /* Default-568h@2x.png */,
 				8BE7B18A1577EDAF00BC7787 /* KNFBFriendSelectorDemo */,
 				8BE7B1C11577EEE400BC7787 /* Libraries */,
 				8BE7B1831577EDAF00BC7787 /* Frameworks */,
@@ -406,7 +409,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = KNFB;
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Kent Nguyen";
 			};
 			buildConfigurationList = 8BE7B17A1577EDAF00BC7787 /* Build configuration list for PBXProject "KNFBFriendSelectorDemo" */;
@@ -464,6 +467,7 @@
 				8B600DD415805FA200203F1B /* Default@2x.png in Resources */,
 				8B600DD515805FA200203F1B /* Default~ipad.png in Resources */,
 				8B147FF515807CBE00C7B064 /* Default@2x~ipad.png in Resources */,
+				429A74D916B155EB00AD60EF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +520,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -540,6 +545,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -559,6 +565,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KNFBFriendSelectorDemo/KNFBFriendSelectorDemo-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "KNFBFriendSelectorDemo/KNFBFriendSelectorDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = (
@@ -575,6 +582,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KNFBFriendSelectorDemo/KNFBFriendSelectorDemo-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "KNFBFriendSelectorDemo/KNFBFriendSelectorDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = (
